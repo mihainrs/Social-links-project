@@ -1,0 +1,100 @@
+/* declaring constant variables and similar */
+:root{
+--Green: hsl(75, 94%, 57%);
+--White: hsl(0, 0%, 100%);
+--Grey: hsl(0, 0%, 20%);
+--DarkGrey: hsl(0, 0%, 12%);
+--OffBlack: hsl(0, 0%, 8%);
+}
+
+
+/* designing for the mobile version / smaller screens first */
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    background-color: var(--OffBlack);
+}
+
+.container{
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    align-items: center;
+    background-color: var(--DarkGrey);
+    padding:1em;
+    border-radius: 10px;
+}
+
+#pfp{
+    border-radius: 100px;
+    width:40%;
+}
+
+/* buttons and their texts */
+button{
+    background-color: var(--Grey);
+    width: 100%;
+    margin:0.5em;
+    border-radius:10px;
+    border:none;
+}
+
+.bttn:active{
+        color:var(--OffBlack);
+}
+
+button:hover{
+    background-color: var(--Green);
+    animation:bubble 0.4s ease-out;
+}
+
+@keyframes bubble {
+    0%{ transform:scale(1);}
+    50%{transform:scale(1.2);}
+    100%{transform:scale(1);}
+}
+
+.text{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* text coloring and fonts */
+h1, p{
+    color:var(--White);
+}
+
+h2{
+    color:var(--Green);
+}
+
+.info {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
+  }
+
+  .location, .bbttn {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
+  }
+
+ .name{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;}
+
+/* desktop version doesn't seem to be required, designed for mobile and looks fairly decent on desktop as well */
